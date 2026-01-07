@@ -38,6 +38,9 @@
         <a href="fournisseurs.php" class="flex items-center py-3 px-6 hover:bg-gray-800 transition <?php echo basename($_SERVER['PHP_SELF']) == 'fournisseurs.php' ? 'bg-blue-600 border-l-4 border-white' : ''; ?>">
             <i class="fas fa-truck-loading mr-3 w-5 text-center"></i> Fournisseurs
         </a>
+        <a href="creer_admin.php" class="flex items-center py-3 px-6 hover:bg-gray-800 transition <?php echo basename($_SERVER['PHP_SELF']) == 'creer_admin.php' ? 'bg-blue-600 border-l-4 border-white' : ''; ?>">
+    <i class="fas fa-user-shield mr-3 w-5 text-center"></i> Créer un Admin
+</a>
 
         <div class="px-6 py-4 text-xs font-bold text-gray-500 uppercase tracking-widest">Analyse</div>
         <a href="bilan.php" class="flex items-center py-3 px-6 hover:bg-gray-800 transition <?php echo basename($_SERVER['PHP_SELF']) == 'bilan.php' ? 'bg-blue-600 border-l-4 border-white' : ''; ?>">
@@ -47,9 +50,9 @@
 
     <div class="border-t border-gray-800 bg-gray-950 p-4">
         <div class="flex justify-around mb-4">
-            <a href="https://github.com/RedDev" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-github fa-lg"></i></a>
-            <a href="https://instagram.com/RedDev" target="_blank" class="text-pink-500 hover:text-pink-400"><i class="fab fa-instagram fa-lg"></i></a>
-            <a href="https://wa.me/243000000000" target="_blank" class="text-green-500 hover:text-green-400"><i class="fab fa-whatsapp fa-lg"></i></a>
+            <a href="https://github.com/Reddy-Nzoloko" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-github fa-lg"></i></a>
+            <a href="https://instagram.com/reddynzoloko3" target="_blank" class="text-pink-500 hover:text-pink-400"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="https://wa.me/243971920530" target="_blank" class="text-green-500 hover:text-green-400"><i class="fab fa-whatsapp fa-lg"></i></a>
         </div>
 
         <a href="logout.php" class="flex items-center py-2 px-4 text-red-400 hover:bg-red-500 hover:text-white rounded transition mb-4">
