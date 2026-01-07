@@ -38,3 +38,30 @@ CREATE TABLE utilisateurs (
     mot_de_passe VARCHAR(255) NOT NULL,
     role ENUM('admin', 'employe') DEFAULT 'employe'
 );
+
+-- Table des Fournisseurs
+CREATE TABLE fournisseurs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(100) NOT NULL,
+    contact VARCHAR(100),
+    telephone VARCHAR(20),
+    email VARCHAR(100),
+    adresse TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Table des Clients
+CREATE TABLE clients (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(100) NOT NULL,
+    telephone VARCHAR(20),
+    email VARCHAR(100),
+    adresse TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- On ajoute les colonnes dans la table mouvements pour faire le lien
+ALTER TABLE mouvements ADD COLUMN client_id INT NULL;
+ALTER TABLE mouvements ADD COLUMN fournisseur_id INT NULL;
+ALTER TABLE mouvements ADD CONSTRAINT fk_mouv_client FOREIGN KEY (client_id) REFERENCES clients(id);
+ALTER TABLE mouvements ADD CONSTRAINT fk_mouv_fourn FOREIGN KEY (fournisseur_id) REFERENCES fournisseurs(id);
