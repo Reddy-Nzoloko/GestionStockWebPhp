@@ -68,7 +68,7 @@ for($i=6; $i>=0; $i--) {
             </div>
             <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-purple-500">
                 <p class="text-gray-500 text-xs font-bold uppercase">Valeur du Stock</p>
-                <p class="text-3xl font-black text-gray-800"><?php echo number_format($valeur_stock, 2); ?> €</p>
+                <p class="text-3xl font-black text-gray-800"><?php echo number_format($valeur_stock, 2); ?> $</p>
             </div>
             <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-red-500 sm:col-span-2 lg:col-span-1">
                 <p class="text-gray-500 text-xs font-bold uppercase">Alertes Rupture</p>
@@ -134,7 +134,7 @@ for($i=6; $i>=0; $i--) {
                         <tr class="hover:bg-gray-50 transition">
                             <td class="px-6 py-4 font-bold"><?php echo htmlspecialchars($item['nom']); ?></td>
                             <td class="px-6 py-4 text-gray-500"><?php echo htmlspecialchars($item['cat_nom']); ?></td>
-                            <td class="px-6 py-4"><?php echo number_format($item['prix_unitaire'], 2); ?>€</td>
+                            <td class="px-6 py-4"><?php echo number_format($item['prix_unitaire'], 2); ?>$</td>
                             <td class="px-6 py-4 font-black text-blue-600"><?php echo $item['quantite_stock']; ?></td>
                             <td class="px-6 py-4 text-center">
                                 <?php if($item['quantite_stock'] <= 0): ?>

@@ -54,12 +54,12 @@ $global_ventes = $pdo->query("SELECT SUM(m.quantite * p.prix_unitaire)
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-500">
                 <h3 class="text-gray-500 text-sm font-bold uppercase">Valeur Actuelle du Stock (Actif)</h3>
-                <p class="text-4xl font-black text-blue-600"><?php echo number_format($global_valeur, 2); ?> €</p>
+                <p class="text-4xl font-black text-blue-600"><?php echo number_format($global_valeur, 2); ?> $</p>
                 <p class="text-xs text-gray-400 mt-2 italic">Basé sur le prix unitaire × stock en magasin</p>
             </div>
             <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-green-500">
                 <h3 class="text-gray-500 text-sm font-bold uppercase">Chiffre d'Affaires Réalisé (Ventes)</h3>
-                <p class="text-4xl font-black text-green-600"><?php echo number_format($global_ventes, 2); ?> €</p>
+                <p class="text-4xl font-black text-green-600"><?php echo number_format($global_ventes, 2); ?> $</p>
                 <p class="text-xs text-gray-400 mt-2 italic">Cumul total des sorties de stock enregistrées</p>
             </div>
         </div>
@@ -82,7 +82,7 @@ $global_ventes = $pdo->query("SELECT SUM(m.quantite * p.prix_unitaire)
                             <td class="px-6 py-4 font-bold"><?php echo htmlspecialchars($b['categorie']); ?></td>
                             <td class="px-6 py-4"><?php echo $b['nb_produits']; ?></td>
                             <td class="px-6 py-4 text-blue-600 font-medium"><?php echo (int)$b['total_unites']; ?></td>
-                            <td class="px-6 py-4 text-right font-black"><?php echo number_format($b['valeur_achat'], 2); ?> €</td>
+                            <td class="px-6 py-4 text-right font-black"><?php echo number_format($b['valeur_achat'], 2); ?> $</td>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -107,7 +107,7 @@ $global_ventes = $pdo->query("SELECT SUM(m.quantite * p.prix_unitaire)
                         <tr class="hover:bg-green-50 transition">
                             <td class="px-6 py-4 font-bold text-green-800"><?php echo htmlspecialchars($v['categorie']); ?></td>
                             <td class="px-6 py-4 italic"><?php echo (int)$v['unites_vendues']; ?> unités</td>
-                            <td class="px-6 py-4 text-right font-bold"><?php echo number_format($v['ca_genere'], 2); ?> €</td>
+                            <td class="px-6 py-4 text-right font-bold"><?php echo number_format($v['ca_genere'], 2); ?> $</td>
                             <td class="px-6 py-4 text-right">
                                 <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-bold">
                                     <?php echo round($poids, 1); ?> %
