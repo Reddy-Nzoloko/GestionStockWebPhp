@@ -42,7 +42,6 @@ $global_ventes = $pdo->query("SELECT SUM(m.quantite * p.prix_unitaire)
 </head>
 <body class="bg-gray-50 flex h-screen overflow-hidden">
     <?php include 'sidebar.php'; ?>
-
     <div class="flex-1 p-8 overflow-y-auto">
         <div class="flex justify-between items-center mb-8">
             <h1 class="text-3xl font-extrabold text-gray-800">Rapport de Rentabilité</h1>
@@ -50,7 +49,6 @@ $global_ventes = $pdo->query("SELECT SUM(m.quantite * p.prix_unitaire)
                 <i class="fas fa-print mr-2"></i> Imprimer le Bilan
             </button>
         </div>
-
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-500">
                 <h3 class="text-gray-500 text-sm font-bold uppercase">Valeur Actuelle du Stock (Actif)</h3>
@@ -63,7 +61,6 @@ $global_ventes = $pdo->query("SELECT SUM(m.quantite * p.prix_unitaire)
                 <p class="text-xs text-gray-400 mt-2 italic">Cumul total des sorties de stock enregistrées</p>
             </div>
         </div>
-
         <div class="grid grid-cols-1 gap-8">
             <div class="bg-white rounded-xl shadow-md overflow-hidden">
                 <div class="p-4 bg-gray-800 text-white font-bold">Analyse du Stock par Catégorie</div>
@@ -88,7 +85,6 @@ $global_ventes = $pdo->query("SELECT SUM(m.quantite * p.prix_unitaire)
                     </tbody>
                 </table>
             </div>
-
             <div class="bg-white rounded-xl shadow-md overflow-hidden">
                 <div class="p-4 bg-green-700 text-white font-bold">Performance des Ventes (Sorties)</div>
                 <table class="w-full text-left">
